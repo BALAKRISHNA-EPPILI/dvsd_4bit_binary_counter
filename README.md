@@ -253,7 +253,9 @@ Printing statistics.
    Chip area for module '\dvsd_4bit_binary_counter': 261.500800
 
 ```
+-Yosys synthesis strategies
 
+![Screenshot from 2021-09-26 02-33-53](https://user-images.githubusercontent.com/88899069/134785928-fbfd8d6c-3257-41b6-b093-a97091345699.png)
 
 ##  magic layout generate 
 
