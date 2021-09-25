@@ -157,6 +157,14 @@ you can installed docker file following this link
 https://docs.docker.com/engine/install/
 
 
+## Pre layout Simulation
+
+ Pre-layout simulatiom command
+![simulation command](https://user-images.githubusercontent.com/88899069/130675440-4dff335a-5561-4192-be3c-f06e92111a1c.png)
+
+
+Pre-layout simulation waveform
+![pre-layout counter](https://user-images.githubusercontent.com/88899069/130675943-2c3108c5-ab0c-4a85-ae04-2bae657b57e6.png)
 
 
 
@@ -186,15 +194,36 @@ bash-4:$
 which shall display the "successful" message.
 ![success_T-9](https://user-images.githubusercontent.com/88899069/130263259-84a11fb6-2600-4975-99de-1f99d78cb3e0.png)
 
-## Pre layout Simulation
+## Synthesis
 
- Pre-layout simulatiom command
-![simulation command](https://user-images.githubusercontent.com/88899069/130675440-4dff335a-5561-4192-be3c-f06e92111a1c.png)
+Synthesis reports
 
+```
+ -Printing statistics.
 
-Pre-layout simulation waveform
-![pre-layout counter](https://user-images.githubusercontent.com/88899069/130675943-2c3108c5-ab0c-4a85-ae04-2bae657b57e6.png)
+=== dvsd_4bit_binary_counter ===
 
+   Number of wires:                 50
+   Number of wire bits:             53
+   Number of public wires:           4
+   Number of public wire bits:       7
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 34
+     $_ANDNOT_                       5
+     $_MUX_                          4
+     $_NAND_                         2
+     $_NOR_                          1
+     $_NOT_                          1
+     $_ORNOT_                        1
+     $_OR_                           6
+     $_XNOR_                         1
+     $_XOR_                          5
+     sky130_fd_sc_hd__dfxtp_2        4
+     sky130_fd_sc_hd__mux2_1         4
+
+```
 
 ##  magic layout generate 
 
