@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 12435 14579
+string GDS_FILE /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/magic/dvsd_4bit_binary_counter.gds
+string GDS_END 242890
+string GDS_START 113466
+<< end >>
