@@ -254,9 +254,9 @@ Printing statistics.
 
 ```
 -Yosys synthesis strategies
+![Screenshot from 2021-09-26 02-33-53](https://user-images.githubusercontent.com/88899069/134785978-c68f1826-dead-448e-8bdd-c106d405bd70.png)
+![Screenshot from 2021-09-26 02-36-10](https://user-images.githubusercontent.com/88899069/134785985-821edeb0-2586-4953-b634-f3050ef249f7.png)
 
-![Screenshot from 2021-09-26 02-33-53](https://user-images.git![Screenshot from 2021-09-26 02-36-10](https://user-images.githubusercontent.com/88899069/134785965-967fdbf8-c78d-48cd-bdf9-9897a18a281c.png)
-hubusercontent.com/88899069/134785928-fbfd8d6c-3257-41b6-b093-a97091345699.png)
 
 
 
