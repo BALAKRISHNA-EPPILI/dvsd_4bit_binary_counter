@@ -30,15 +30,6 @@ fabrication of a behavioral RTL (Register-Transfer Level) of an 4bit binary coun
 ![image](https://user-images.githubusercontent.com/88899069/131217649-179fbb88-ba36-4333-bc7d-a8a3e65793c7.png)
 
 
-## Pre layout Simulation
-
- Pre-layout simulatiom command
-![simulation command](https://user-images.githubusercontent.com/88899069/130675440-4dff335a-5561-4192-be3c-f06e92111a1c.png)
-
-
-Pre-layout simulation waveform
-![pre-layout counter](https://user-images.githubusercontent.com/88899069/130675943-2c3108c5-ab0c-4a85-ae04-2bae657b57e6.png)
-
 # OPENLANE tool
 
 ## OpenLane 
@@ -195,6 +186,15 @@ bash-4:$
 which shall display the "successful" message.
 ![success_T-9](https://user-images.githubusercontent.com/88899069/130263259-84a11fb6-2600-4975-99de-1f99d78cb3e0.png)
 
+## Pre layout Simulation
+
+ Pre-layout simulatiom command
+![simulation command](https://user-images.githubusercontent.com/88899069/130675440-4dff335a-5561-4192-be3c-f06e92111a1c.png)
+
+
+Pre-layout simulation waveform
+![pre-layout counter](https://user-images.githubusercontent.com/88899069/130675943-2c3108c5-ab0c-4a85-ae04-2bae657b57e6.png)
+
 
 ##  magic layout generate 
 
@@ -219,7 +219,103 @@ magic dvsd_4bit_binary_counter.mag
 Post-layout simulation waveform
 ![Screenshot from 2021-08-28 18-13-21](https://user-images.githubusercontent.com/88899069/131218272-1d1e1643-877b-45bd-8602-0689e8d8a9bb.png)
 
+## Steps to reproduce and explore the design
 
+- Clone the project using following command
+ 
+`git clone https://github.com/Khalique13/dvsd-8-bit-priority-encoder.git`
+
+- To explore synthesis of the design
+
+```
+make mount
+flow.tcl -design dvsd_pe -synth_explore
+```
+
+- To reproduce Pre-layout simulation
+
+```
+cd pre_layout/
+iverilog -o dvsd_pe dvsd_pe.v test_dvsd_pe.v
+./dvsd_pe
+gtkwave dvsd_pe.vcd
+```
+
+- To explore floorplan
+
+```
+cd floorplan/
+magic lef read merged.lef def read dvsd_pe.floorplan.def &
+```
+
+- To explore placement
+
+```
+cd placement/ 
+magic lef read merged.lef def read dvsd_pe.placement.def &
+```
+
+- To explore final layout
+
+```
+cd final_layout/
+magic dvsd_pe.mag
+```
+
+- To reproduce Post-layout simulation
+
+```
+cd post_layout/
+iverilog -o gls -DFUNCTIONAL -DUNIT_DELAY=#1 gls.v primitives.v sky130_fd_sc_hd.v
+./gls
+gtkwave gls.vcd
+```
+
+- Complete details, logs and results can be found under this [folder](https://github.com/Khalique13/dvsd-8-bit-priority-encoder/tree/main/dvsd_pe). 
+
+```
+dvsd_pe
+├── config.tcl
+├── runs
+│   ├── run
+│   │   ├── config.tcl
+│   │   ├── logs
+│   │   │   ├── cts
+│   │   │   ├── cvc
+│   │   │   ├── floorplan
+│   │   │   ├── klayout
+│   │   │   ├── magic
+│   │   │   ├── placement
+│   │   │   ├── routing
+│   │   │   └── synthesis
+│   │   ├── reports
+│   │   │   ├── cts
+│   │   │   ├── cvc
+│   │   │   ├── floorplan
+│   │   │   ├── klayout
+│   │   │   ├── magic
+│   │   │   ├── placement
+│   │   │   ├── routing
+│   │   │   └── synthesis
+│   │   ├── results
+│   │   │   ├── cts
+│   │   │   ├── cvc
+│   │   │   ├── floorplan
+│   │   │   ├── klayout
+│   │   │   ├── magic
+│   │   │   ├── placement
+│   │   │   ├── routing
+│   │   │   └── synthesis
+│   │   └── tmp
+│   │       ├── cts
+│   │       ├── cvc
+│   │       ├── floorplan
+│   │       ├── klayout
+│   │       ├── magic
+│   │       ├── placement
+│   │       ├── routing
+│   │       └── synthesis
+```
 
 ## Key points to Remember
 
