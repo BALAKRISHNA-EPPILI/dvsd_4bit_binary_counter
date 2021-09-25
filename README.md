@@ -224,6 +224,36 @@ Synthesis reports
      sky130_fd_sc_hd__mux2_1         4
 
 ```
+```
+Printing statistics.
+
+=== dvsd_4bit_binary_counter ===
+
+   Number of wires:                 27
+   Number of wire bits:             30
+   Number of public wires:           4
+   Number of public wire bits:       7
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 27
+     sky130_fd_sc_hd__a21bo_2        1
+     sky130_fd_sc_hd__a31o_2         1
+     sky130_fd_sc_hd__buf_1          1
+     sky130_fd_sc_hd__dfxtp_2        4
+     sky130_fd_sc_hd__inv_2          5
+     sky130_fd_sc_hd__mux2_1         4
+     sky130_fd_sc_hd__nand2_2        2
+     sky130_fd_sc_hd__nor2b_2        4
+     sky130_fd_sc_hd__o21a_2         1
+     sky130_fd_sc_hd__o22a_2         1
+     sky130_fd_sc_hd__o2bb2a_2       1
+     sky130_fd_sc_hd__or2_2          2
+
+   Chip area for module '\dvsd_4bit_binary_counter': 261.500800
+
+```
+
 
 ##  magic layout generate 
 
