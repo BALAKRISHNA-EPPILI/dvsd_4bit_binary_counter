@@ -272,6 +272,7 @@ bash-4:$
 
 magic dvsd_4bit_binary_counter.mag
 
+
 ```
 ![Screenshot from 2021-08-20 21-52-38](https://user-images.githubusercontent.com/88899069/130264092-1211e24a-ab7b-4c75-9b3a-03df196cc362.png)
 ![magic_layout(1)](https://user-images.githubusercontent.com/88899069/130264133-08094a4a-d5e8-41d0-8463-b5da329835de.png)
