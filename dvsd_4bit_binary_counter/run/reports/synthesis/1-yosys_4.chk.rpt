@@ -1,0 +1,8 @@
+
+28. Executing CHECK pass (checking for obvious problems).
+Checking module dvsd_4bit_binary_counter...
+Warning: Wire dvsd_4bit_binary_counter.\out [3] is used but has no driver.
+Warning: Wire dvsd_4bit_binary_counter.\out [2] is used but has no driver.
+Warning: Wire dvsd_4bit_binary_counter.\out [1] is used but has no driver.
+Warning: Wire dvsd_4bit_binary_counter.\out [0] is used but has no driver.
+Found and reported 4 problems.

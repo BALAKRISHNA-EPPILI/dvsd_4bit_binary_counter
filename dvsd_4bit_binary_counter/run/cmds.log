@@ -1,0 +1,167 @@
+Fri Aug 20 11:14:35 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/extract_metal_layers.py -t /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef -o /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/met_layers_list.txt"
+
+Fri Aug 20 11:14:37 UTC 2021 - Executing "/openLANE_flow/scripts/mergeLef.py -i /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef {/home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fill_8.lef /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fakediode_2.lef /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fill_12.lef /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__decap_12.lef} -o /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/merged_unpadded.lef |& tee >&@stdout"
+
+Fri Aug 20 11:14:37 UTC 2021 - Executing "/openLANE_flow/scripts/libtrim.pl /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/trimmed.lib.exclude.list > /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/trimmed.lib"
+
+Fri Aug 20 11:14:38 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/new_tracks.py -i /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/config.tracks"
+
+Fri Aug 20 11:14:40 UTC 2021 - Executing "echo {openlane 2021.08.19_04.19.49} > /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/OPENLANE_VERSION"
+
+Fri Aug 20 11:14:40 UTC 2021 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Fri Aug 20 11:14:40 UTC 2021 - Executing "yosys -c /openLANE_flow/scripts/synth.tcl -l /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/synthesis/1-yosys.log |& tee >&@stdout"
+
+Fri Aug 20 11:14:42 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/dvsd_4bit_binary_counter\/runs\/binary_counter_bala\/results\/synthesis\/dvsd_4bit_binary_counter.synthesis.v/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:14:42 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 0/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:14:42 UTC 2021 - Executing "sed -i /defparam/d /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/synthesis/dvsd_4bit_binary_counter.synthesis.v"
+
+Fri Aug 20 11:14:42 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/synthesis/2-opensta"
+
+Fri Aug 20 11:14:46 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_floorplan.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/floorplan/3-verilog2def.openroad.log"
+
+Fri Aug 20 11:14:48 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_ioplacer.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/floorplan/4-ioPlacer.log"
+
+Fri Aug 20 11:14:50 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_tapcell.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/floorplan/5-tapcell.log"
+
+Fri Aug 20 11:14:51 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_pdn.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/floorplan/6-pdn.log"
+
+Fri Aug 20 11:14:53 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_replace.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/placement/7-replace.log"
+
+Fri Aug 20 11:14:57 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_resizer.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/placement/7-resizer.log"
+
+Fri Aug 20 11:14:59 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/8-write_verilog.log"
+
+Fri Aug 20 11:15:01 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/dvsd_4bit_binary_counter\/runs\/binary_counter_bala\/results\/synthesis\/dvsd_4bit_binary_counter.synthesis_optimized.v/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:15:01 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/dvsd_4bit_binary_counter\/runs\/binary_counter_bala\/results\/synthesis\/dvsd_4bit_binary_counter.synthesis.v/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:15:01 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/synthesis/9-opensta_post_resizer"
+
+Fri Aug 20 11:15:04 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_opendp.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/placement/10-opendp.log"
+
+Fri Aug 20 11:15:06 UTC 2021 - Executing "/openLANE_flow/scripts/libtrim.pl /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/cts.lib.exclude.list > /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/cts.lib"
+
+Fri Aug 20 11:15:06 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_cts.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/cts/11-cts.log"
+
+Fri Aug 20 11:16:51 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/12-write_verilog.log"
+
+Fri Aug 20 11:16:53 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/dvsd_4bit_binary_counter\/runs\/binary_counter_bala\/results\/synthesis\/dvsd_4bit_binary_counter.synthesis_cts.v/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:16:53 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/dvsd_4bit_binary_counter\/runs\/binary_counter_bala\/results\/synthesis\/dvsd_4bit_binary_counter.synthesis_optimized.v/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:16:53 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_resizer_timing.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/placement/12-resizer_timing.log"
+
+Fri Aug 20 11:16:55 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/13-write_verilog.log"
+
+Fri Aug 20 11:16:57 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/dvsd_4bit_binary_counter\/runs\/binary_counter_bala\/results\/synthesis\/dvsd_4bit_binary_counter.synthesis_optimized.v/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:16:57 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/dvsd_4bit_binary_counter\/runs\/binary_counter_bala\/results\/synthesis\/dvsd_4bit_binary_counter.synthesis_cts.v/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:16:57 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/synthesis/14-opensta_post_resizer_timing"
+
+Fri Aug 20 11:17:00 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_groute.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/routing/15-fastroute.log"
+
+Fri Aug 20 11:17:04 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_fill.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/routing/16-addspacers.log"
+
+Fri Aug 20 11:17:06 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/17-write_verilog.log"
+
+Fri Aug 20 11:17:07 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/dvsd_4bit_binary_counter\/runs\/binary_counter_bala\/results\/synthesis\/dvsd_4bit_binary_counter.synthesis_preroute.v/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:17:07 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/dvsd_4bit_binary_counter\/runs\/binary_counter_bala\/results\/synthesis\/dvsd_4bit_binary_counter.synthesis_optimized.v/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:17:07 UTC 2021 - Executing "envsubst < /openLANE_flow/scripts/tritonRoute.param > /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/routing/18-tritonRoute.param"
+
+Fri Aug 20 11:17:07 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_droute.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/routing/18-tritonRoute.log"
+
+Fri Aug 20 11:17:11 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/tr2klayout.py -i /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/routing/18-tritonRoute.drc -o /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/routing/18-tritonRoute.klayout.xml --design-name dvsd_4bit_binary_counter"
+
+Fri Aug 20 11:17:13 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/spef_extractor/main.py -l /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/merged_unpadded.lef -d /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/routing/17-dvsd_4bit_binary_counter.def -mw L -ec 1 |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/routing/19-spef_extraction.log"
+
+Fri Aug 20 11:17:15 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/synthesis/20-opensta_spef"
+
+Fri Aug 20 11:17:18 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/write_powered_def.py -d /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/routing/17-dvsd_4bit_binary_counter.def -l /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/merged.lef --power-port VPWR --ground-port VGND --powered-netlist {} -o /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/routing/21-dvsd_4bit_binary_counter.powered.def |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/lvs/21-write_powered_verilog.log"
+
+Fri Aug 20 11:17:20 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/22-write_verilog.log"
+
+Fri Aug 20 11:17:22 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/dvsd_4bit_binary_counter\/runs\/binary_counter_bala\/results\/lvs\/dvsd_4bit_binary_counter.lvs.powered.v/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:17:22 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/dvsd_4bit_binary_counter\/runs\/binary_counter_bala\/results\/synthesis\/dvsd_4bit_binary_counter.synthesis_preroute.v/} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/config.tcl"
+
+Fri Aug 20 11:17:22 UTC 2021 - Executing "magic -noconsole -dnull -rcfile /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/mag_gds.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/magic/23-magic.log"
+
+Fri Aug 20 11:17:23 UTC 2021 - Executing "magic -noconsole -dnull -rcfile /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/gds_pointers.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/magic/24-magic.mag.gds_ptrs.log"
+
+Fri Aug 20 11:17:23 UTC 2021 - Executing "sed -i -n {/^<< properties >>/,/^<< end >>/p} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/magic/magic_gds_ptrs.mag"
+
+Fri Aug 20 11:17:23 UTC 2021 - Executing "magic -noconsole -dnull -rcfile /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/lef.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/magic/25-magic.lef.log"
+
+Fri Aug 20 11:17:24 UTC 2021 - Executing "magic -noconsole -dnull -rcfile /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/maglef.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/magic/26-magic.maglef.log"
+
+Fri Aug 20 11:17:24 UTC 2021 - Executing "bash /openLANE_flow/scripts/klayout/def2gds.sh /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/klayout/sky130A.lyt /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/routing/17-dvsd_4bit_binary_counter.def dvsd_4bit_binary_counter /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/klayout/dvsd_4bit_binary_counter.gds {/home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_ef_sc_hd__fakediode_2.gds /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_ef_sc_hd__fill_8.gds /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_ef_sc_hd__fill_12.gds /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_ef_sc_hd__fill_4.gds /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_ef_sc_hd__decap_12.gds } |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/klayout/27-klayout.log"
+
+Fri Aug 20 11:17:28 UTC 2021 - Executing "bash /openLANE_flow/scripts/klayout/xor.sh /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/magic/dvsd_4bit_binary_counter.gds /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/klayout/dvsd_4bit_binary_counter.gds dvsd_4bit_binary_counter /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/klayout/dvsd_4bit_binary_counter.xor.gds |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/klayout/28-klayout.xor.log"
+
+Fri Aug 20 11:17:32 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/parse_klayout_xor_log.py -l /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/klayout/28-klayout.xor.log -o /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/klayout/28-klayout.xor.rpt"
+
+Fri Aug 20 11:17:34 UTC 2021 - Executing "bash /openLANE_flow/scripts/klayout/xor.sh /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/magic/dvsd_4bit_binary_counter.gds /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/klayout/dvsd_4bit_binary_counter.gds dvsd_4bit_binary_counter /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/klayout/dvsd_4bit_binary_counter.xor.xml |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/klayout/29-klayout.xor.log"
+
+Fri Aug 20 11:17:38 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/parse_klayout_xor_log.py -l /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/klayout/29-klayout.xor.log -o /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/klayout/29-klayout.xor.rpt"
+
+Fri Aug 20 11:17:39 UTC 2021 - Executing "magic -noconsole -dnull -rcfile /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/magic_spice.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/magic/30-magic_spice.log"
+
+Fri Aug 20 11:17:40 UTC 2021 - Executing "netgen -batch source /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/tmp/lvs/setup_file.lef.lvs |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/lvs/31-lvs.lef.log"
+
+Fri Aug 20 11:17:40 UTC 2021 - Executing "magic -noconsole -dnull -rcfile /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/drc.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/magic/32-magic.drc.log"
+
+Fri Aug 20 11:17:41 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/magic_drc_to_tcl.py -i /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/magic/32-magic.drc -o /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/magic/32-magic.drc.tcl"
+
+Fri Aug 20 11:17:43 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/magic_drc_to_tr_drc.py -i /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/magic/32-magic.drc -o /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/magic/32-magic.tr.drc"
+
+Fri Aug 20 11:17:44 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/tr2klayout.py -i /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/magic/32-magic.tr.drc -o /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/magic/32-magic.drc.klayout.xml --design-name dvsd_4bit_binary_counter"
+
+Fri Aug 20 11:17:46 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/magic_drc_to_rdb.py --magic_drc_in /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/magic/32-magic.drc --rdb_out /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/magic/32-magic.drc.rdb"
+
+Fri Aug 20 11:17:47 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_antenna_check.tcl |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/routing/33-or_antenna.log"
+
+Fri Aug 20 11:17:49 UTC 2021 - Executing "mv -f /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/routing/antenna.rpt /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/routing/34-antenna.rpt"
+
+Fri Aug 20 11:17:49 UTC 2021 - Executing "awk { BEGIN {  # Print power and standard_input definitions
+    print "VPWR power 1.8";
+    print "VGND power 0.0";
+    print "#define std_input min@VGND max@VPWR";
+}
+$1 == "input" {  # Print input nets
+    gsub(/;/, "");
+    if ( $2 == "VPWR" || $2 == "VGND" ) {  # ignore power nets
+        next;
+    }
+    if ( NF == 3 ) {  # print buses as net[range]
+        $2 = $3 $2;
+    }
+    print $2, "input std_input";
+}} /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/lvs/dvsd_4bit_binary_counter.lvs.powered.v > /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/cvc/dvsd_4bit_binary_counter.power"
+
+Fri Aug 20 11:17:49 UTC 2021 - Executing "awk { /Black-box entry subcircuit/ {  # remove black-box defintions
+    while ( $1 != ".ends" ) {
+        getline;
+    }
+    getline;
+}
+/^\*/ {  # remove comments
+    next;
+}
+/^.ENDS .*/ {  # remove name from ends lines
+    print $1;
+    next;
+}
+ {
+    print $0;
+}} /home/balakrishna/Desktop/vsdflow/work/tools/openlane_working_dir/openlane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/magic/dvsd_4bit_binary_counter.lef.spice > /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/results/cvc/dvsd_4bit_binary_counter.cdl"
+
+Fri Aug 20 11:17:49 UTC 2021 - Executing "cvc /openLANE_flow/scripts/cvc/sky130A/cvcrc.sky130A |& tee >&@stdout /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/logs/cvc/35-cvc_screen.log"
+
+Fri Aug 20 11:17:50 UTC 2021 - Executing "openroad -python /openLANE_flow/report_generation_wrapper.py -d /openLANE_flow/designs/dvsd_4bit_binary_counter -dn dvsd_4bit_binary_counter -t binary_counter_bala -o /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/final_summary_report.csv -m /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/manufacturability_report.rpt -rs /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala/reports/runtime_summary_report.rpt -r /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/binary_counter_bala"
+
