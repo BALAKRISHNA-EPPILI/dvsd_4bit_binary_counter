@@ -1,0 +1,8 @@
+clock_skew_report
+Clock clk
+Latency      CRPR       Skew
+_47_/CLK ^
+   0.42
+_48_/CLK ^
+   0.16      0.00       0.26
+
