@@ -264,6 +264,11 @@ Printing statistics.
 
 
 
+### Floorplanning 
+
+
+![Screenshot from 2021-10-07 00-36-58](https://user-images.githubusercontent.com/88899069/136267549-a8ae54e7-5c2a-4d3c-bb43-6e15f36b3659.png)
+
 
 ##  magic layout generate 
 
