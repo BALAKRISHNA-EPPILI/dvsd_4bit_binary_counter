@@ -27,7 +27,7 @@ fabrication of a behavioral RTL (Register-Transfer Level) of an 4bit binary coun
 - [Author](#author)
 
 ## Design 
-![image](https://user-images.githubusercontent.com/88899069/131217542-dacf8cc3-6764-4b8f-b63f-c305ef5c586e.png)
+![image](https://user-images.githubusercontent.com/88899069/136440444-5a95cb69-10a4-45c0-99ef-550b18e3e11d.png)
 
 ## Pin Configuration
 ![image](https://user-images.githubusercontent.com/88899069/131217649-179fbb88-ba36-4333-bc7d-a8a3e65793c7.png)
