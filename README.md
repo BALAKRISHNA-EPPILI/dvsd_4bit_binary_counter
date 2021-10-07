@@ -269,6 +269,80 @@ Printing statistics.
 
 ![Screenshot from 2021-10-07 00-36-58](https://user-images.githubusercontent.com/88899069/136267549-a8ae54e7-5c2a-4d3c-bb43-6e15f36b3659.png)
 
+### Placement
+
+- Placement Analysis
+```
+---------------------------------
+total displacement        139.9 u
+average displacement        1.4 u
+max displacement            9.5 u
+original HPWL             477.4 u
+legalized HPWL            616.4 u
+delta HPWL                   29 %
+```
+
+
+- Routing resources analysis:
+```
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical         1350          1150          14.81%
+met1       Horizontal       1800          1460          18.89%
+met2       Vertical         1350          1197          11.33%
+met3       Horizontal        900           832          7.56%
+met4       Vertical          540           460          14.81%
+met5       Horizontal        180           152          15.56%
+---------------------------------------------------------------
+
+Final number of vias: 28
+Final usage 3D: 133
+```
+
+- Final congestion report:
+```
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1               1150            27            2.35%             0 /  0 /  0
+met1              1460            22            1.51%             0 /  0 /  0
+met2              1197             0            0.00%             0 /  0 /  0
+met3               832             0            0.00%             0 /  0 /  0
+met4               460             0            0.00%             0 /  0 /  0
+met5               152             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             5251            49            0.93%             0 /  0 /  0
+```
+### Routing
+
+ - Routing resources analysis:
+ ```
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical         1350           112          91.70%
+met1       Horizontal       1800          1448          19.56%
+met2       Vertical         1350          1197          11.33%
+met3       Horizontal        900           832          7.56%
+met4       Vertical          540           460          14.81%
+met5       Horizontal        180           152          15.56%
+---------------------------------------------------------------
+```
+- Final congestion report:
+```
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                112             0            0.00%             0 /  0 /  0
+met1              1448            37            2.56%             0 /  0 /  0
+met2              1197            54            4.51%             0 /  0 /  0
+met3               832             0            0.00%             0 /  0 /  0
+met4               460             0            0.00%             0 /  0 /  0
+met5               152             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             4201            91            2.17%             0 /  0 /  0
+
+```
+
 
 ##  magic layout generate 
 
