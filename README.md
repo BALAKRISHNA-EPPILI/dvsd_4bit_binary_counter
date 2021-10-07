@@ -364,8 +364,31 @@ Up-via summary (total 208):.
 ----------------------
                    208
 ```
+- Final Summary:
 
+```
+Run Directory: /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/cutu
+----------------------------------------
 
+Magic DRC Summary:
+Source: /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/cutu/reports/magic//32-magic.drc
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/cutu/results/lvs/dvsd_4bit_binary_counter.lvs_parsed.lef.log
+LVS reports no net, device, pin, or property mismatches.
+Total errors = 0
+----------------------------------------
+
+Antenna Summary:
+Source: /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/cutu/reports/routing//34-antenna.rpt
+Number of pins violated: 0
+Number of nets violated: 0
+[INFO]: check full report here: /openLANE_flow/designs/dvsd_4bit_binary_counter/runs/cutu/reports/final_summary_report.csv
+[INFO]: Saving Runtime Environment
+[SUCCESS]: Flow Completed Without Fatal Errors.
+```
 
 ##  magic layout generate 
 
