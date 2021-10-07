@@ -390,6 +390,43 @@ Number of nets violated: 0
 [SUCCESS]: Flow Completed Without Fatal Errors.
 ```
 
+### Layout vs Schematic
+
+- Subcircuit summary
+
+```
+Circuit 1: dvsd_4bit_binary_counter                 |Circuit 2: dvsd_4bit_binary_counter                        
+------------------------------------------|--------------------------------------------------
+sky130_fd_sc_hd__decap_12                           |sky130_fd_sc_hd__decap_12               
+sky130_fd_sc_hd__decap_4                            |sky130_fd_sc_hd__decap_4              
+sky130_fd_sc_hd__decap_3                            |sky130_fd_sc_hd__decap_3              
+sky130_fd_sc_hd__clkbuf_2                           |sky130_fd_sc_hd__clkbuf_2              
+sky130_fd_sc_hd__fill_1                             |sky130_fd_sc_hd__fill_1             
+sky130_fd_sc_hd__tapvpwrvgnd_1                      |sky130_fd_sc_hd__tapvpwrvgnd_1                
+sky130_fd_sc_hd__decap_6                            |sky130_fd_sc_hd__decap_6               
+sky130_fd_sc_hd__decap_8                            |sky130_fd_sc_hd__decap_8               
+sky130_fd_sc_hd__fill_2                             |sky130_fd_sc_hd__fill_2                 
+sky130_fd_sc_hd__inv_2                              |sky130_fd_sc_hd__inv_2                
+sky130_fd_sc_hd__o21a_1                             |sky130_fd_sc_hd__o21a_1               
+sky130_fd_sc_hd__nand2_1                            |sky130_fd_sc_hd__nand2_1             
+sky130_fd_sc_hd__or2_1                              |sky130_fd_sc_hd__or2_1               
+sky130_fd_sc_hd__clkbuf_1                           |sky130_fd_sc_hd__clkbuf_1                 
+sky130_fd_sc_hd__clkbuf_16                          |sky130_fd_sc_hd__clkbuf_16              
+sky130_fd_sc_hd__o22a_1                             |sky130_fd_sc_hd__o22a_1                 
+sky130_fd_sc_hd__nor2b_1                            |sky130_fd_sc_hd__nor2b_1              
+sky130_fd_sc_hd__mux2_1                             |sky130_fd_sc_hd__mux2_1              
+sky130_fd_sc_hd__a21bo_1                            |sky130_fd_sc_hd__a21bo_1
+sky130_fd_sc_hd__dfxtp_1                            |sky130_fd_sc_hd__dfxtp_1
+sky130_fd_sc_hd__o2bb2a_1                           |sky130_fd_sc_hd__o2bb2a_1
+sky130_fd_sc_hd__a31o_1                             |sky130_fd_sc_hd__a31o_1
+sky130_fd_sc_hd__buf_1                              |sky130_fd_sc_hd__buf_1
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+```
+
+
+
 ##  magic layout generate 
 
 ![T-10](https://user-images.githubusercontent.com/88899069/130263482-1cae4239-1f15-4370-bf50-48deca90239a.png)
