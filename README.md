@@ -342,6 +342,29 @@ met5               152             0            0.00%             0 /  0 /  0
 Total             4201            91            2.17%             0 /  0 /  0
 
 ```
+- Complete detail routing:
+```
+Total wire length = 663 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 299 um.
+Total wire length on LAYER met2 = 335 um.
+Total wire length on LAYER met3 = 28 um.
+Total wire length on LAYER met4 = 0 um.
+Total wire length on LAYER met5 = 0 um.
+Total number of vias = 208.
+Up-via summary (total 208):.
+
+----------------------
+ FR_MASTERSLICE      0
+            li1    105
+           met1    100
+           met2      3
+           met3      0
+           met4      0
+----------------------
+                   208
+```
+
 
 
 ##  magic layout generate 
